@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axios": "^1.7.3",
+    "physics-lab-web-api": "^0.4.1",
+    "sqlite3": "^5.1.7"
+  }
+}
