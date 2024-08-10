@@ -9,25 +9,14 @@ function query(params) {
     let sql = 'SELECT * FROM data WHERE 1=1'; // `1=1` 是为了便于拼接其他条件
     let queryParams = [];
 
-    // 根据 params 对象动态构建查询条件
     if (params.name) {
       sql += ' AND name LIKE ?';
       queryParams.push(`%${params.name}%`);
     }
 
-    if (params.year) {
-      sql += ' AND year = ?';
-      queryParams.push(params.year);
-    }
-
     if (params.id) {
       sql += ' AND id = ?';
       queryParams.push(params.id);
-    }
-
-    if (params.primaryDiscipline) {
-      sql += ' AND primaryDiscipline = ?';
-      queryParams.push(params.primaryDiscipline);
     }
 
     // 执行查询
